@@ -1,0 +1,8 @@
+local ZorVexHWID = (syn and syn.get_hwid()) or (gethwid and gethwid()) or (Fluxus and Fluxus.get_hwid()) or "HWID not supported"
+
+if setclipboard then
+    setclipboard(tostring(ZorVexHWID))
+    print("[ZorVex] HWID successfully copied: " .. tostring(ZorVexHWID))
+else
+    warn("[ZorVex] Executor does not support setclipboard!")
+end
